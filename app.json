@@ -4,24 +4,46 @@
     "slug": "Memora",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/splash-icon.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#F8E1E9",
+      "dark": {
+        "image": "./assets/splash-icon1.jpg",
+        "resizeMode": "cover",
+        "backgroundColor": "#4A2C35"
+      }
     },
+
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#F8E1E9"
+      },
+      "splash": {
+        "image": "./assets/splash-icon.jpg",
+        "resizeMode": "cover",
+        "backgroundColor": "#F8E1E9"
       },
       "edgeToEdgeEnabled": true
     },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F8E1E9",
+          "image": "./assets/splash-icon.jpg",
+          "resizeMode": "cover",
+          "imageWidth": 180
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     }
