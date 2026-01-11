@@ -1,0 +1,302 @@
+{
+  "occasions": [
+    {
+      "id": "occ1",
+      "title": "Engagement",
+      "color": "#f5c6cb",
+      "accentColor": "#d4af37",
+      "description": "Romantic setups for the big 'yes' moment",
+      "imageUrl": "https://www.katebackdrop.com/cdn/shop/files/b685e7118e1df712495e292e083c2dad.jpg?v=1725929777"
+    },
+    {
+      "id": "occ2",
+      "title": "Katb El Ketab",
+      "color": "#fff5e6",
+      "accentColor": "#c9a96e",
+      "description": "Elegant & traditional Egyptian wedding contract decorations",
+      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3378119996318806926"
+    },
+    {
+      "id": "occ3",
+      "title": "Birthday",
+      "color": "#ffd1dc",
+      "accentColor": "#b76e79",
+      "description": "From cute to luxurious birthday vibes",
+      "imageUrl": "https://thumbs.dreamstime.com/b/elegant-wedding-decoration-white-gold-balloons-flowers-curtain-backdrop-creating-luxurious-photo-zone-377188229.jpg"
+    },
+    {
+      "id": "occ4",
+      "title": "Baby Shower",
+      "color": "#e0f7fa",
+      "accentColor": "#81d4fa",
+      "description": "Sweet & tender setups for welcoming the little one",
+      "imageUrl": "https://i.etsystatic.com/12453827/r/il/df10d5/3299081207/il_fullxfull.3299081207_4r5g.jpg"
+    },
+    {
+      "id": "occ5",
+      "title": "Graduation",
+      "color": "#fce4ec",
+      "accentColor": "#f48fb1",
+      "description": "Make them cry (happy tears) with dreamy setups",
+      "imageUrl": "https://www.katebackdrop.com/cdn/shop/files/b685e7118e1df712495e292e083c2dad.jpg?v=1725929777"
+    },
+    {
+      "id": "occ6",
+      "title": "Anniversary",
+      "color": "#f3e5f5",
+      "accentColor": "#ce93d8",
+      "description": "Romantic celebrations of love that lasts",
+      "imageUrl": "https://images.pexels.com/photos/29110845/pexels-photo-29110845/free-photo-of-romantic-dinner-setup-with-candles-and-flowers.jpeg"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "occasionIds": ["occ1", "occ5"],
+      "title": "Rose Gold & Blush Engagement Arch Setup",
+      "creator": "LuxVibes Decor",
+      "priceRange": "3800–7200 EGP",
+      "imageUrl": "https://www.katebackdrop.com/cdn/shop/files/b685e7118e1df712495e292e083c2dad.jpg?v=1725929777",
+      "isPremium": true,
+      "isCustomizable": true
+    },
+    {
+      "id": "p2",
+      "occasionIds": ["occ2"],
+      "title": "Classic Gold Katb El Ketab Table",
+      "creator": "Elegance Moments",
+      "priceRange": "4800–9500 EGP",
+      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3378119996318806926",
+      "isPremium": true
+    },
+    {
+      "id": "p3",
+      "occasionIds": ["occ3"],
+      "title": "Golden Luxury Birthday Balloon Wall",
+      "creator": "PartyGlow Studio",
+      "priceRange": "2900–5800 EGP",
+      "imageUrl": "https://thumbs.dreamstime.com/b/elegant-wedding-decoration-white-gold-balloons-flowers-curtain-backdrop-creating-luxurious-photo-zone-377188229.jpg"
+    },
+    {
+      "id": "p4",
+      "occasionIds": ["occ4"],
+      "title": "Pastel Organic Baby Shower Gift Basket",
+      "creator": "SweetMoments Gifts",
+      "priceRange": "1300–3200 EGP",
+      "imageUrl": "https://i.etsystatic.com/12453827/r/il/df10d5/3299081207/il_fullxfull.3299081207_4r5g.jpg",
+      "isCustomizable": true
+    },
+    {
+      "id": "p5",
+      "occasionIds": ["occ6"],
+      "title": "Romantic Candlelight Anniversary Dinner",
+      "creator": "LoveStory Decor",
+      "priceRange": "4200–7800 EGP",
+      "imageUrl": "https://images.pexels.com/photos/29110845/pexels-photo-29110845/free-photo-of-romantic-dinner-setup-with-candles-and-flowers.jpeg",
+      "isPremium": true
+    },
+    {
+      "id": "p6",
+      "occasionIds": ["occ5"],
+      "title": "Dreamy Outdoor Proposal Decoration",
+      "creator": "MagicMoments",
+      "priceRange": "5500–13000 EGP",
+      "imageUrl": "https://www.katebackdrop.com/cdn/shop/files/b685e7118e1df712495e292e083c2dad.jpg?v=1725929777",
+      "isPremium": true
+    },
+    {
+      "id": "p7",
+      "occasionIds": ["occ1", "occ3"],
+      "title": "Pink & Gold Balloon Garland Package",
+      "creator": "BalloonQueen",
+      "priceRange": "1900–4100 EGP",
+      "imageUrl": "https://occasional-moments.com/wp-content/uploads/2025/08/IMG_20250731_171430.jpg"
+    },
+    {
+      "id": "p8",
+      "occasionIds": ["occ4"],
+      "title": "Nautical Baby Shower Gift Hamper",
+      "creator": "SkyRose Gifts",
+      "priceRange": "1600–3600 EGP",
+      "imageUrl": "https://i.etsystatic.com/12453827/r/il/df10d5/3299081207/il_fullxfull.3299081207_4r5g.jpg"
+    },
+    {
+      "id": "p9",
+      "occasionIds": ["occ2", "occ6"],
+      "title": "Velvet & Gold Sweet Table Setup",
+      "creator": "RoyalEvents",
+      "priceRange": "6500–11500 EGP",
+      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3378119996461534605",
+      "isPremium": true
+    },
+    {
+      "id": "p10",
+      "occasionIds": ["occ1", "occ3"],
+      "title": "Rose Gold Bridal Shower Dessert Table",
+      "creator": "ChicCelebrations",
+      "priceRange": "3400–6900 EGP",
+      "imageUrl": "https://m.media-amazon.com/images/I/71OPw4Byk4L.jpg"
+    },
+    {
+      "id": "p11",
+      "occasionIds": ["occ3"],
+      "title": "Chrome & Gold Birthday Backdrop",
+      "creator": "GlowParty",
+      "priceRange": "2500–5200 EGP",
+      "imageUrl": "https://m.media-amazon.com/images/I/61W7eZotDfL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "p12",
+      "occasionIds": ["occ4"],
+      "title": "Luxury Baby Girl Hamper Pink Theme",
+      "creator": "LittleLux",
+      "priceRange": "1800–4000 EGP",
+      "imageUrl": "https://julijoli.com/cdn/shop/files/IMG_8403-1.jpg?v=1741188831&width=1946"
+    },
+    {
+      "id": "p13",
+      "occasionIds": ["occ5", "occ1"],
+      "title": "Heart Shape Balloon Proposal Arch",
+      "creator": "SurpriseMe",
+      "priceRange": "4600–8900 EGP",
+      "imageUrl": "https://m.media-amazon.com/images/I/71Ifrfnrr2L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "p14",
+      "occasionIds": ["occ6"],
+      "title": "Rooftop Romantic Anniversary Setup",
+      "creator": "SkyLove Decor",
+      "priceRange": "7000–14000 EGP",
+      "imageUrl": "https://media.istockphoto.com/id/901713540/photo/romantic-candlelight-dinner.jpg"
+    },
+    {
+      "id": "p15",
+      "occasionIds": ["occ2"],
+      "title": "Traditional Katb Floral Runner Gold",
+      "creator": "Heritage Events",
+      "priceRange": "5200–9800 EGP",
+      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3378119996318806926"
+    },
+    {
+      "id": "p16",
+      "occasionIds": ["occ3"],
+      "title": "Pastel Rainbow Birthday Garland",
+      "creator": "ColorBurst",
+      "priceRange": "2200–4800 EGP",
+      "imageUrl": "https://occasional-moments.com/wp-content/uploads/2025/08/IMG_20250731_171430.jpg"
+    },
+    {
+      "id": "p17",
+      "occasionIds": ["occ1"],
+      "title": "Blush Pink Engagement Table Decor",
+      "creator": "SoftRomance",
+      "priceRange": "3100–6200 EGP",
+      "imageUrl": "https://m.media-amazon.com/images/I/71OPw4Byk4L.jpg"
+    },
+    {
+      "id": "p18",
+      "occasionIds": ["occ4"],
+      "title": "Whale Theme Baby Shower Basket",
+      "creator": "OceanBaby Gifts",
+      "priceRange": "1400–3100 EGP",
+      "imageUrl": "https://i.etsystatic.com/12453827/r/il/df10d5/3299081207/il_fullxfull.3299081207_4r5g.jpg"
+    },
+    {
+      "id": "p19",
+      "occasionIds": ["occ5"],
+      "title": "Marry Me Neon + Rose Path",
+      "creator": "ForeverMoments",
+      "priceRange": "6000–12500 EGP",
+      "imageUrl": "https://www.katebackdrop.com/cdn/shop/files/b685e7118e1df712495e292e083c2dad.jpg?v=1725929777"
+    },
+    {
+      "id": "p20",
+      "occasionIds": ["occ6", "occ2"],
+      "title": "Champagne Gold Anniversary Dessert Stand",
+      "creator": "GoldenTouch",
+      "priceRange": "5800–10500 EGP",
+      "imageUrl": "https://thumbs.dreamstime.com/b/romantic-dinner-date-setup-table-two-red-roses-wine-glasses-rose-petals-stylish-glass-room-setting-intimate-387736035.jpg"
+    },
+    {
+      "id": "p21",
+      "occasionIds": ["occ3"],
+      "title": "Butterfly Pink Birthday Backdrop",
+      "creator": "ButterflyParty",
+      "priceRange": "2700–5500 EGP",
+      "imageUrl": "https://m.media-amazon.com/images/I/61W7eZotDfL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "p22",
+      "occasionIds": ["occ1"],
+      "title": "Elegant Rose Gold Balloon Kit",
+      "creator": "BalloonArt",
+      "priceRange": "2000–4500 EGP",
+      "imageUrl": "https://m.media-amazon.com/images/I/71Ifrfnrr2L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "p23",
+      "occasionIds": ["occ4"],
+      "title": "Luxury Pastel Pink Baby Gift Set",
+      "creator": "BabyBliss",
+      "priceRange": "1700–3800 EGP",
+      "imageUrl": "https://julijoli.com/cdn/shop/files/IMG_8403-1.jpg?v=1741188831&width=1946"
+    },
+    {
+      "id": "p24",
+      "occasionIds": ["occ5", "occ6"],
+      "title": "Floating Candles Romantic Proposal",
+      "creator": "DreamNight",
+      "priceRange": "4900–9200 EGP",
+      "imageUrl": "https://media.istockphoto.com/id/901713540/photo/romantic-candlelight-dinner.jpg"
+    },
+    {
+      "id": "p25",
+      "occasionIds": ["occ2"],
+      "title": "Crystal & Gold Katb Centerpiece",
+      "creator": "CrystalEvents",
+      "priceRange": "6200–11000 EGP",
+      "imageUrl": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3378119996461534605"
+    },
+    {
+      "id": "p26",
+      "occasionIds": ["occ3"],
+      "title": "Gold Confetti Birthday Photo Zone",
+      "creator": "ConfettiWorld",
+      "priceRange": "3000–6000 EGP",
+      "imageUrl": "https://thumbs.dreamstime.com/b/elegant-wedding-decoration-white-gold-balloons-flowers-curtain-backdrop-creating-luxurious-photo-zone-377188229.jpg"
+    },
+    {
+      "id": "p27",
+      "occasionIds": ["occ1"],
+      "title": "Minimalist Blush Engagement Decor",
+      "creator": "MinimalLove",
+      "priceRange": "2800–5900 EGP",
+      "imageUrl": "https://m.media-amazon.com/images/I/71OPw4Byk4L.jpg"
+    },
+    {
+      "id": "p28",
+      "occasionIds": ["occ4"],
+      "title": "Teddy Bear Luxury Baby Basket",
+      "creator": "TeddyJoy",
+      "priceRange": "1500–3400 EGP",
+      "imageUrl": "https://i.etsystatic.com/12453827/r/il/df10d5/3299081207/il_fullxfull.3299081207_4r5g.jpg"
+    },
+    {
+      "id": "p29",
+      "occasionIds": ["occ6"],
+      "title": "Rose Petals & Wine Anniversary Setup",
+      "creator": "PassionNight",
+      "priceRange": "4500–8500 EGP",
+      "imageUrl": "https://thumbs.dreamstime.com/b/romantic-dinner-date-setup-table-two-red-roses-wine-glasses-rose-petals-stylish-glass-room-setting-intimate-387736035.jpg"
+    },
+    {
+      "id": "p30",
+      "occasionIds": ["occ5"],
+      "title": "Luxury LED Love Lights Proposal",
+      "creator": "LightOfLove",
+      "priceRange": "5100–9900 EGP",
+      "imageUrl": "https://www.katebackdrop.com/cdn/shop/files/b685e7118e1df712495e292e083c2dad.jpg?v=1725929777",
+      "isPremium": true
+    }
+  ]
+}
