@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.jpg",
       "resizeMode": "cover",
@@ -22,12 +22,13 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.memora.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.jpg",
-        "backgroundColor": "#F8E1E9"
+        "backgroundColor": "#4A2C35"
       },
       "splash": {
-        "image": "./assets/splash-icon.jpg",
+        "image": "./assets/icon.jpg",
         "resizeMode": "cover",
         "backgroundColor": "#F8E1E9"
       },
@@ -38,7 +39,7 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#F8E1E9",
-          "image": "./assets/splash-icon.jpg",
+          "image": "./assets/icon.jpg",
           "resizeMode": "cover",
           "imageWidth": 180
         }
