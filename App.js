@@ -1,8 +1,13 @@
 import { useEffect, useState, useCallback } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-import { View, Text, StatusBar } from 'react-native';
+import { StatusBar, View } from 'react-native';
+import CategoriesScreen from './screens/CategoriesScreen.js';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import OccasionOverViewScreen from './screens/OccasionOverViewScreen.js';
 
 SplashScreen.preventAutoHideAsync();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -10,14 +15,11 @@ export default function App() {
   useEffect(() => {
     async function prepare() {
       try {
-        // ← هنا حط كل اللي عايز تحمله قبل ما الـ app يظهر
-        // مثال:
         // await Font.loadAsync({ ... });
         // await AsyncStorage.getItem('userToken');
         // await fetchSomeInitialData();
 
-        // لو عايز تشوف الـ splash أطول (للاختبار بس)
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise(resolve => setTimeout(resolve, 800));
       } catch (e) {
         console.warn("Splash preparation error:", e);
       } finally {
@@ -40,10 +42,16 @@ export default function App() {
 
   return (
     <>
-      <StatusBar barStyle={"dark-content"} />
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }} onLayout={onLayoutRootView}>
-        <Text>Welcome to Memora</Text>
+      <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+        <StatusBar barStyle={"dark-content"} />
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name='categories' component={CategoriesScreen} />
+            <Stack.Screen name='occsionDetails' component={OccasionOverViewScreen} />
+          </Stack.Navigator>
+        </NavigationContainer>
       </View>
+
     </>
 
   );
