@@ -1,10 +1,11 @@
-import { useEffect, useState, useCallback } from 'react';
-import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar, View } from 'react-native';
-import CategoriesScreen from './screens/CategoriesScreen.js';
+import { useEffect, useState, useCallback } from "react";
+import * as SplashScreen from "expo-splash-screen";
+import { StatusBar, View } from "react-native";
+import CategoriesScreen from "./screens/CategoriesScreen.js";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import OccasionOverViewScreen from './screens/OccasionOverViewScreen.js';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import OccasionOverViewScreen from "./screens/OccasionOverViewScreen.js";
+import { COLORS } from "./constants/colors.js";
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
@@ -19,7 +20,7 @@ export default function App() {
         // await AsyncStorage.getItem('userToken');
         // await fetchSomeInitialData();
 
-        await new Promise(resolve => setTimeout(resolve, 800));
+        await new Promise((resolve) => setTimeout(resolve, 800));
       } catch (e) {
         console.warn("Splash preparation error:", e);
       } finally {
@@ -43,16 +44,36 @@ export default function App() {
   return (
     <>
       <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-        <StatusBar barStyle={"dark-content"} />
+        <StatusBar barStyle={"light-content"} />
         <NavigationContainer>
-          <Stack.Navigator>
-            <Stack.Screen name='categories' component={CategoriesScreen} />
-            <Stack.Screen name='occsionDetails' component={OccasionOverViewScreen} />
+          <Stack.Navigator screenOptions={{
+            headerStyle: {
+              backgroundColor: COLORS.primary,
+
+            },
+            headerTintColor: COLORS.white,
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              fontSize: 25,
+              fontWeight: "bold"
+            }
+          }}>
+            <Stack.Screen
+              name="categories"
+              component={CategoriesScreen}
+              options={{
+                title: "Home",
+
+              }}
+            />
+            <Stack.Screen
+              name="occsionDetails"
+              component={OccasionOverViewScreen}
+
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
-
     </>
-
   );
 }
