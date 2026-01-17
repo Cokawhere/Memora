@@ -11,7 +11,7 @@ export default function CategoriyGridTile({ title, color, imageUrl, onPress }) {
                 onPress={onPress}
             >
                 <View style={styles.inerContainer}>
-                    <Image source={{ uri: imageUrl }} resizeMode="cover" style={styles.imageStyle}/>
+                    <Image source={{ uri: imageUrl }} resizeMode="cover" style={styles.imageStyle} />
                     <View style={styles.overLay}>
                         <Text style={styles.title}>{title}</Text>
                     </View>
@@ -23,10 +23,12 @@ export default function CategoriyGridTile({ title, color, imageUrl, onPress }) {
 const styles = StyleSheet.create({
     gridItem: {
         flex: 1,
-        margin: 10,
+        margin: 4,
         height: 150,
         borderRadius: 10,
         overflow: "hidden",
+        elevation: 4,
+
     },
     inerContainer: {
         flex: 1,
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     title: {
-        position: "absolute", 
+        position: "absolute",
         color: "#fff",
         fontSize: 23,
         fontWeight: "bold",

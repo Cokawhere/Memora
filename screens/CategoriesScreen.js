@@ -1,14 +1,17 @@
-import { FlatList } from "react-native";
+import { FlatList, View, StyleSheet } from "react-native";
 import { occasions } from "../utils/data";
 import CategoriyGridTile from "../components/categoriyGridTile";
 import { useNavigation } from "@react-navigation/native";
+import { COLORS } from "../constants/colors";
 
 export default function CategoriesScreen({ }) {
     const Navigation = useNavigation();
 
     function renderOccasion({ item, ...itemData }) {
         function renderOccasionDetails() {
-            Navigation.navigate("occsionDetails", { occasionId: item.id });
+            Navigation.navigate("occsionDetails", {
+                occasionId: item.id, occasionTitle: item.title
+            });
         }
         return (
             <CategoriyGridTile
@@ -20,11 +23,21 @@ export default function CategoriesScreen({ }) {
         );
     }
     return (
-        <FlatList
-            data={occasions}
-            keyExtractor={(occasion) => occasion.id}
-            renderItem={renderOccasion}
-            numColumns={2}
-        />
+        <View style={{ flex: 1, }}>
+            <FlatList
+                data={occasions}
+                keyExtractor={(occasion) => occasion.id}
+                renderItem={renderOccasion}
+                numColumns={2}
+                style={styles.homePageStyle}
+            />
+        </View>
     );
 }
+const styles = StyleSheet.create({
+    homePageStyle: {
+        flex: 1,
+        padding: 4,
+        backgroundColor: COLORS.backgroundLight
+    }
+})
