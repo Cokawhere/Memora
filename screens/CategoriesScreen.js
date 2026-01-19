@@ -7,7 +7,7 @@ import { COLORS } from "../constants/colors";
 export default function CategoriesScreen({ }) {
     const Navigation = useNavigation();
 
-    function renderOccasion({ item, ...itemData }) {
+    function renderOccasion({item, ...itemData  }) {
         function renderOccasionDetails() {
             Navigation.navigate("occsionDetails", {
                 occasionId: item.id, occasionTitle: item.title
