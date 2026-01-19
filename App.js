@@ -47,32 +47,34 @@ export default function App() {
       <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
         <StatusBar barStyle={"light-content"} />
         <NavigationContainer>
-          <Stack.Navigator screenOptions={{
-            headerStyle: {
-              backgroundColor: COLORS.primary,
-
-            },
-            headerTintColor: COLORS.white,
-            headerTitleAlign: "center",
-            headerTitleStyle: {
-              fontSize: 25,
-              fontWeight: "bold"
-            }
-          }}>
+          <Stack.Navigator
+            screenOptions={{
+              headerStyle: {
+                backgroundColor: COLORS.primary,
+              },
+              headerTintColor: COLORS.white,
+              headerTitleAlign: "center",
+              headerTitleStyle: {
+                fontSize: 25,
+                fontWeight: "bold",
+              },
+            }}
+          >
             <Stack.Screen
               name="categories"
               component={CategoriesScreen}
               options={{
                 title: "Home",
-
               }}
             />
             <Stack.Screen
               name="occsionDetails"
               component={OccasionOverViewScreen}
-
             />
-            <Stack.Screen name="productDetails" component={ProductDetailsScreen} />
+            <Stack.Screen
+              name="productDetails"
+              component={ProductDetailsScreen}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
