@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OccasionOverViewScreen from "./screens/OccasionOverViewScreen.js";
 import { COLORS } from "./constants/colors.js";
+import ProductDetailsScreen from "./screens/ProductDetailsScreen.js";
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
@@ -71,6 +72,7 @@ export default function App() {
               component={OccasionOverViewScreen}
 
             />
+            <Stack.Screen name="productDetails" component={ProductDetailsScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
