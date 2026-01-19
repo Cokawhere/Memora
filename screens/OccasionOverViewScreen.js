@@ -10,8 +10,25 @@ export default function OccasionOverViewScreen({ }) {
     const route = useRoute();
     const navigation = useNavigation();
     const occasionId = route.params.occasionId;
-    const productsTitle = route.params?.occasionTitle || 'occasion';
+    const productsTitle = route.params?.occasionTitle || "occasion";
 
+    function renderOccasionItems({ item, ...itemData }) {
+        function goToProductDetailsScreen() {
+            navigation.navigate("productDetails", {
+                title: item.title,
+                priceRange: item.priceRange,
+                image: item.imageUrl,
+                creator: item.creator
+            });
+        }
+        return (
+            <OccasionItem
+                title={item.title}
+                imageUrl={item.imageUrl}
+                onPress={goToProductDetailsScreen}
+            />
+        );
+    }
 
     const displayedProducts = products.filter((product) => {
         return product.occasionIds.includes(occasionId);
@@ -23,28 +40,22 @@ export default function OccasionOverViewScreen({ }) {
     }, [navigation, occasionId]);
 
     return (
-        <View style={styles.container}>
+        <View style={{ flex: 1 }}>
             <FlashList
                 data={displayedProducts}
                 masonry={true}
                 numColumns={2}
+                onPress={displayedProducts}
                 estimatedItemSize={220}
                 keyExtractor={(item) => item.id}
-                renderItem={({ item }) => (
-                    <OccasionItem
-                        title={item.title}
-                        imageUrl={item.imageUrl}
-                    />
-                )}
+                style={styles.container}
+                renderItem={renderOccasionItems}
             />
         </View>
     );
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        paddingTop: 6,
-        paddingHorizontal: 5,
-        backgroundColor: COLORS.backgroundLight
+        backgroundColor: COLORS.backgroundLight,
     },
 });

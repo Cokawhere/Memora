@@ -9,7 +9,7 @@ import {
 import { useState, useEffect } from "react";
 
 const { width, height } = Dimensions.get("window");
-export default function OccasionItem({ title, creator, priceRange, imageUrl }) {
+export default function OccasionItem({ title, creator, priceRange, imageUrl, onPress }) {
     const [aspectRatio, setAspectRatio] = useState(0.75);
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function OccasionItem({ title, creator, priceRange, imageUrl }) {
 
     return (
         <View style={styles.productsPageContinar}>
-            <Pressable style={({ pressed }) => [pressed && styles.pressableStyle]} onPress={() => { }} >
+            <Pressable style={({ pressed }) => [pressed && styles.pressableStyle]} onPress={onPress} >
                 <View>
                     <Image
                         source={{ uri: imageUrl }}
@@ -63,7 +63,5 @@ const styles = StyleSheet.create({
         opacity: 0.7,
         backgroundColor: "#0d0d0dcd",
         borderRadius: 10,
-
-
     },
 });

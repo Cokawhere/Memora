@@ -1,10 +1,14 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import { useRoute, useNavigation } from "@react-navigation/native";
+
 
 export default function ProductDetailsScreen() {
+    const route = useRoute();
+    const data = route.params
+
     return (
         <View>
-            <Text>ProductDetailsScreen</Text>
+            <Text>{`  ${data.priceRange} ${data.title}`}</Text>
         </View>
     )
 }
