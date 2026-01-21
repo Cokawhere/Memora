@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { useState, useEffect } from "react";
 
-const { width, height } = Dimensions.get("window");
 export default function OccasionItem({ title, creator, priceRange, imageUrl, onPress }) {
     const [aspectRatio, setAspectRatio] = useState(0.75);
 
@@ -43,8 +42,9 @@ export default function OccasionItem({ title, creator, priceRange, imageUrl, onP
 }
 const styles = StyleSheet.create({
     productsPageContinar: {
-        maxWidth: (width - 20) / 2,
         overflow: "hidden",
+        marginHorizontal: 4,
+        marginTop: 6
 
     },
     productImage: {

@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: 10,
         overflow: "hidden",
     },
     styleButton: {
@@ -57,7 +56,6 @@ const styles = StyleSheet.create({
     imageStyle: {
         width: "100%",
         height: "100%",
-
     },
     overLay: {
         justifyContent: "center",

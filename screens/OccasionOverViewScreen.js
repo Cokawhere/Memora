@@ -14,12 +14,7 @@ export default function OccasionOverViewScreen({ }) {
 
     function renderOccasionItems({ item, ...itemData }) {
         function goToProductDetailsScreen() {
-            navigation.navigate("productDetails", {
-                title: item.title,
-                priceRange: item.priceRange,
-                image: item.imageUrl,
-                creator: item.creator
-            });
+            navigation.navigate("productDetails", item);
         }
         return (
             <OccasionItem
@@ -40,13 +35,11 @@ export default function OccasionOverViewScreen({ }) {
     }, [navigation, occasionId]);
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, }}>
             <FlashList
                 data={displayedProducts}
                 masonry={true}
                 numColumns={2}
-                onPress={displayedProducts}
-                estimatedItemSize={220}
                 keyExtractor={(item) => item.id}
                 style={styles.container}
                 renderItem={renderOccasionItems}
@@ -57,5 +50,6 @@ export default function OccasionOverViewScreen({ }) {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: COLORS.backgroundLight,
+
     },
 });

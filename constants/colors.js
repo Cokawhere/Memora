@@ -10,6 +10,7 @@ export const COLORS = {
     black: '#000000',
     error: '#C94C4C',
     success: '#6BAF92',
+   
 
     gradientStart: '#F8E1E9',
     gradientEnd: '#E8C7D3',
