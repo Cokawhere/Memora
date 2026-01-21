@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OccasionOverViewScreen from "./screens/OccasionOverViewScreen.js";
 import { COLORS } from "./constants/colors.js";
 import ProductDetailsScreen from "./screens/ProductDetailsScreen.js";
+import FavoritesScreen from "./screens/FavoritesScreen.js";
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
@@ -74,6 +75,16 @@ export default function App() {
             <Stack.Screen
               name="productDetails"
               component={ProductDetailsScreen}
+              options={{
+                title: "Product Details",
+              }}
+            />
+            <Stack.Screen
+              name="favorites"
+              component={FavoritesScreen}
+              options={{
+                title: "Favorites",
+              }}
             />
           </Stack.Navigator>
         </NavigationContainer>
