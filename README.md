@@ -21,7 +21,6 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
       <br><sub><b>Favorites</b></sub>
     </td>
   </tr>
-  
   <tr>
     <td align="center">
       <img src="assets/screens/occasionGrid2.png" width="300" alt="Artist Songs"/>
@@ -36,9 +35,8 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
       <br><sub><b>Product details</b></sub>
     </td>
   </tr>
-
   <tr>
-     <td align="center">
+    <td align="center">
       <img src="assets/screens/productDetails2.png" width="300" alt="Artist Songs Variant"/>
       <br><sub><b>Product details</b></sub>
     </td>
@@ -47,7 +45,7 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
       <br><sub><b> Empty Favorites</b></sub>
     </td>
      <td align="center">
-      <img src="assets/memora-demo.gif" width="320" alt="Memora Demo GIF"/>
+      <img src="assets/memora-demo.gif" width="300" alt="Memora Demo GIF"/>
       <br><sub><b> Demo in Action</b></sub>
     </td>
   </tr>
