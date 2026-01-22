@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { MMKV } from "react-native-mmkv";
+import AsyncStorage from "@react-native-async-storage/async-storage"
 
-const storage = new MMKV({ id: "memora-favorites" });
+// const storage = new MMKV({ id: "memora-favorites" });
+const FAVORITES_KEY = 'memora_favorites';
 export const useFavorites = () => {
 
     const [favorites, setFavorites] = useState([]);
 
     useEffect(() => {
-        const load = () => {
+        const load = async () => {
             try {
-                const save = storage.getString("favorites");
+                const save = await AsyncStorage.getItem(FAVORITES_KEY);
                 if (save) {
                     setFavorites(JSON.parse(save));
                 }
@@ -22,7 +23,7 @@ export const useFavorites = () => {
     const addFavorites = (product) => {
         try {
             const newFav = [...favorites, product];
-            storage.set("favorites", JSON.stringify(newFav));
+            AsyncStorage.setItem(FAVORITES_KEY, JSON.stringify(newFav));
             setFavorites(newFav);
         } catch (e) {
             console.log(`faild to add product to favorites: ${e}`);
@@ -31,23 +32,23 @@ export const useFavorites = () => {
     const removeFavorites = (productId) => {
         try {
             const newFav = favorites.filter((prod) => prod.id !== productId.id);
-            storage.set("favorites", JSON.stringify(newFav));
+            AsyncStorage.setItem(FAVORITES_KEY, JSON.stringify(newFav));
             setFavorites(newFav);
         } catch (e) {
             console.log(`faild to remove product from favorites: ${e}`);
         }
     };
     const isFavorite = (productId) => {
-        favorites.some((p) => p.id === productId);
+        return favorites.some((p) => p.id === productId);
     };
 
     const toggleFavorite = (product) => {
-        if (isFavorite(producrId)) {
+        if (isFavorite(product.id)) {
             removeFavorites(product);
         } else {
             addFavorites(product);
         }
     };
 
-    return { isFavorite, toggleFavorite };
+    return { isFavorite, toggleFavorite, favorites };
 };
