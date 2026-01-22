@@ -4,19 +4,17 @@ React Native mobile app for discovering and saving occasion decorations (engagem
 
 Built with clean code, beautiful UI inspired by Pinterest, and smooth performance .
 
-![Memora](assets\icon.jpg)  
-
 ## Screenshots
 
 <table>
   <tr>
+     <td align="center">
+      <img src="assets/screens/splash.png" width="300" alt="Login"/>
+      <br><sub><b>Splash Screen </b></sub>
+    </td>
     <td align="center">
       <img src="assets/screens/home.png" width="300" alt="Home Screen"/>
       <br><sub><b>Home Screen</b></sub>
-    </td>
-    <td align="center">
-      <img src="assets/screens/splash.png" width="300" alt="Login"/>
-      <br><sub><b>Splash Screen </b></sub>
     </td>
     <td align="center">
       <img src="assets/screens/favpage.png" width="300" alt="Favorites"/>
@@ -62,17 +60,18 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
 
 ## Tech & Implementation Highlights
 
-| Technology / Pattern                | Description                                                                    | Why it matters (especially for juniors)                                      |
-| ----------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| **Expo + Dev Client**               | Built & run using `expo-dev-client` for native modules support                 | Allows using libraries like MMKV, reanimated, etc. without ejecting          |
-| **React Navigation — Native Stack** | `@react-navigation/native-stack` for smooth, native-feeling screen transitions | Better performance & gestures than the old stack navigator                   |
-| **Custom Hook: useFavorites**       | Manages favorites list + AsyncStorage persistence                              | Great example of state + persistence logic in one reusable place             |
-| **AsyncStorage** (local storage)    | Persistent favorites (can be swapped later with MMKV for speed)                | Simple & reliable for small-to-medium local data                             |
-| **FlashList (masonry)**             | `@shopify/flash-list` with `masonry={true}` & `numColumns={2}`                 | High-performance grid like Pinterest / Instagram Explore                     |
-| **Dynamic Image Aspect Ratio**      | `Image.getSize()` + `aspectRatio` style to prevent stretching                  | Professional look — images keep original proportions                         |
-| **Splash Screen**                   | Customized via `expo-splash-screen` + `app.json` config                        | Polished app loading experience                                              |
-| **Consistent Theming**              | Central `colors.js` file + shadow/text effects for elegant UI                  | Easy to maintain & change brand colors                                       |
-| **Pinterest-inspired Design**       | Rounded corners, overlays, text shadows, masonry layout, big hero images       | Feels premium & modern — very suitable for visual-first app like decorations |
+| Technology / Pattern                | Description                                                                     matters (especially for juniors)                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------ 
+| **Expo + Dev Client**               | Built & run using `expo-dev-client` for native modules support                 |          |
+| **React Navigation — Native Stack** | `@react-navigation/native-stack` for smooth, native-feeling screen transitions |
+| **Custom Hook: useFavorites**       | Manages favorites list + AsyncStorage persistence                              | 
+| **AsyncStorage** (local storage)    | Persistent favorites (can be swapped later with MMKV for speed)                | 
+| **FlashList (masonry)**             | `@shopify/flash-list` with `masonry={true}` & `numColumns={2}`                 | 
+
+| **Dynamic Image Aspect Ratio**      | `Image.getSize()` + `aspectRatio` style to prevent stretching                  | 
+| **Splash Screen**                   | Customized via `expo-splash-screen` + `app.json` config                        | 
+| **Consistent Theming**              | Central `colors.js` file + shadow/text effects for elegant UI                  | 
+| **Pinterest-inspired Design**       | Rounded corners, overlays, text shadows, masonry layout, big hero images       | 
 
 ## Project Structure
 
