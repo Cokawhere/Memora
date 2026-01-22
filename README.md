@@ -20,7 +20,6 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
       <img src="assets/screens/favpage.png" width="300" alt="Favorites"/>
       <br><sub><b>Favorites</b></sub>
     </td>
-
   </tr>
   <tr>
     <td align="center">
@@ -45,6 +44,10 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
     <td align="center">
       <img src="assets/screens/emfavpage.png" width="300" alt="Favorites"/>
       <br><sub><b> Empty Favorites</b></sub>
+    </td>
+     <td align="center">
+      <img src="assets/memora-demo.gif" width="320" alt="Memora Demo GIF"/>
+      <br><sub><b> Demo in Action</b></sub>
     </td>
   </tr>
 </table>
