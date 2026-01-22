@@ -21,6 +21,7 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
       <br><sub><b>Favorites</b></sub>
     </td>
   </tr>
+  
   <tr>
     <td align="center">
       <img src="assets/screens/occasionGrid2.png" width="300" alt="Artist Songs"/>
