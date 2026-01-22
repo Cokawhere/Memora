@@ -4,10 +4,10 @@ import { FlashList } from "@shopify/flash-list";
 import { useNavigation } from "@react-navigation/native";
 import OccasionItem from '../components/OccasionItem';
 import { COLORS } from '../constants/colors';
+import EmptyFavorites from '../components/EmptyFavorites';
 
 export default function FavoritesScreen() {
     const { favorites } = useFavorites();
-    console.log(favorites);
 
     const navigation = useNavigation();
     function renderOccasionItems({ item, ...itemData }) {
@@ -31,6 +31,7 @@ export default function FavoritesScreen() {
                 keyExtractor={(item) => item.id}
                 style={styles.container}
                 renderItem={renderOccasionItems}
+                ListEmptyComponent={<EmptyFavorites />}
             />
         </View>
     )

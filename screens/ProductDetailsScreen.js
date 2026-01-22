@@ -40,7 +40,7 @@ export default function ProductDetailsScreen() {
                         <Ionicons
                             name={favorite ? "heart" : "heart-outline"}
                             color={favorite ? COLORS.primary : "#f5a6d3"}
-                            size={40}
+                            size={45}
                         />
                     </Pressable>
                 </View>
@@ -69,29 +69,30 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: "#11101155",
+        backgroundColor: "#211e216c",
         paddingBottom: 400,
         width: "100%",
     },
     imageConatiner: {
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 20,
+        marginTop: 40,
     },
     productDetailsImageStyle: {
-        borderRadius: 50,
-        width: 350,
-        height: 300,
+        borderRadius: 40,
+        width: 370,
+        height: 350,
         borderWidth: 1,
         borderColor: COLORS.white,
     },
     favIcon: {
         position: "absolute",
-        top: 10,
+        top: 18,
         right: 10,
     },
     titleIconContainer: {
         marginHorizontal: 15,
+        marginTop:10,
     },
     title: {
         color: COLORS.primary,
