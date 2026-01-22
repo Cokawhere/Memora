@@ -71,14 +71,3 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
 | **Splash Screen**                   | Customized via `expo-splash-screen` + `app.json` config                        | 
 | **Consistent Theming**              | Central `colors.js` file + shadow/text effects for elegant UI                  | 
 | **Pinterest-inspired Design**       | Rounded corners, overlays, text shadows, masonry layout, big hero images       | 
-
-## Project Structure
-
-Memora/
-├── components/ # reusable UI pieces
-├── constants/ # colors, themes
-├── hooks/ # custom logic (useFavorites)
-├── screens/ # main screens
-├── utils/ # data.js (JSON import)
-├── app.json # splash, icons, config
-└── package.json
