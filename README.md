@@ -60,14 +60,13 @@ Built with clean code, beautiful UI inspired by Pinterest, and smooth performanc
 
 ## Tech & Implementation Highlights
 
-| Technology / Pattern                | Description                                                                     matters (especially for juniors)                                      |
-| ----------------------------------- | ------------------------------------------------------------------------------ 
+| Technology / Pattern                | Description                                                                    | 
+| ----------------------------------- | ------------------------------------------------------------------------------ |
 | **Expo + Dev Client**               | Built & run using `expo-dev-client` for native modules support                 |          |
 | **React Navigation — Native Stack** | `@react-navigation/native-stack` for smooth, native-feeling screen transitions |
 | **Custom Hook: useFavorites**       | Manages favorites list + AsyncStorage persistence                              | 
 | **AsyncStorage** (local storage)    | Persistent favorites (can be swapped later with MMKV for speed)                | 
 | **FlashList (masonry)**             | `@shopify/flash-list` with `masonry={true}` & `numColumns={2}`                 | 
-
 | **Dynamic Image Aspect Ratio**      | `Image.getSize()` + `aspectRatio` style to prevent stretching                  | 
 | **Splash Screen**                   | Customized via `expo-splash-screen` + `app.json` config                        | 
 | **Consistent Theming**              | Central `colors.js` file + shadow/text effects for elegant UI                  | 
