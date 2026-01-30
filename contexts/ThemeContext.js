@@ -8,7 +8,7 @@ const THEMS_KEY = 'memora_theme';
 export const ThemeContext = createContext();
 
 export default function ThemeProvider({ children }) {
-    const [isDark, setIsDark] = useState(true);
+    const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
         const loadTheme = async () => {

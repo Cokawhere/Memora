@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage"
 
 // const storage = new MMKV({ id: "memora-favorites" });
@@ -7,7 +7,7 @@ export const useFavorites = () => {
 
     const [favorites, setFavorites] = useState([]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const load = async () => {
             try {
                 const save = await AsyncStorage.getItem(FAVORITES_KEY);
@@ -19,7 +19,7 @@ export const useFavorites = () => {
             }
         };
         load();
-    }, []);
+    }, [favorites]);
     const addFavorites = (product) => {
         try {
             const newFav = [...favorites, product];
