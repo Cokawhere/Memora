@@ -3,6 +3,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { StatusBar, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import Nativestack from "./navigation/Native-stack"
+import ThemeProvider from "./contexts/ThemeContext";
 
 
 SplashScreen.preventAutoHideAsync();
@@ -43,9 +44,11 @@ export default function App() {
     <>
       <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
         <StatusBar barStyle={"light-content"} />
+        <ThemeProvider>
         <NavigationContainer>
           <Nativestack />
         </NavigationContainer>
+        </ThemeProvider>
       </View>
     </>
   );
