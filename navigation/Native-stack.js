@@ -2,15 +2,20 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OccasionOverViewScreen from "../screens/OccasionOverViewScreen";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import DrawerNavigation from "../navigation/Drawer"
-import { COLORS } from "../constants/colors";
+import { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+
 
 const Stack = createNativeStackNavigator();
 export default function Nativestack() {
+    const { COLORS } = useContext(ThemeContext);
+    if (!COLORS) return null;
+
     return (
         <Stack.Navigator
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: COLORS.primary,
+                    backgroundColor:COLORS.primary,
                 },
                 headerTintColor: COLORS.white,
                 headerTitleAlign: "center",
