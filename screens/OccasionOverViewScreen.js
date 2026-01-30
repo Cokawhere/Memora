@@ -3,9 +3,10 @@ import { products } from "../utils/data";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { FlashList } from "@shopify/flash-list";
 import OccasionItem from "../components/OccasionItem";
-import { useLayoutEffect } from "react";
-import { COLORS } from "../constants/colors";
+import { useLayoutEffect,useContext } from "react";
+import { ThemeContext } from '../contexts/ThemeContext';
 
+const { COLORS } = useContext(ThemeContext);
 export default function OccasionOverViewScreen({ }) {
     const route = useRoute();
     const navigation = useNavigation();

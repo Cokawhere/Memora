@@ -1,17 +1,19 @@
 import {
     View,
     Text,
-    ScrollView,
     Image,
     Pressable,
     StyleSheet,
     ImageBackground,
 } from "react-native";
 import { useRoute } from "@react-navigation/native";
-import { useState, useLayoutEffect } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { COLORS } from "../constants/colors";
 import { useFavorites } from "../hooks/useFavorites";
+import { ThemeContext } from '../contexts/ThemeContext';
+import { useContext } from 'react'
+
+
+const { COLORS } = useContext(ThemeContext);
 
 export default function ProductDetailsScreen() {
     const route = useRoute();

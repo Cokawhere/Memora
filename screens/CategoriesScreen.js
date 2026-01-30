@@ -2,9 +2,11 @@ import { FlatList, View, StyleSheet, Pressable } from "react-native";
 import { occasions } from "../utils/data";
 import CategoriyGridTile from "../components/categoriyGridTile";
 import { useNavigation } from "@react-navigation/native";
-import { COLORS } from "../constants/colors";
 import { Ionicons } from "@expo/vector-icons";
+import { useContext } from 'react'
+import { ThemeContext } from '../contexts/ThemeContext';
 
+const { COLORS } = useContext(ThemeContext);
 
 export default function CategoriesScreen({ }) {
     const Navigation = useNavigation();

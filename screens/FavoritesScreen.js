@@ -3,8 +3,11 @@ import { useFavorites } from '../hooks/useFavorites'
 import { FlashList } from "@shopify/flash-list";
 import { useNavigation } from "@react-navigation/native";
 import OccasionItem from '../components/OccasionItem';
-import { COLORS } from '../constants/colors';
 import EmptyFavorites from '../components/EmptyFavorites';
+import { useContext } from 'react'
+import { ThemeContext } from '../contexts/ThemeContext';
+
+const { COLORS } = useContext(ThemeContext);
 
 export default function FavoritesScreen() {
     const { favorites } = useFavorites();

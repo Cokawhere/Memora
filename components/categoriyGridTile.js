@@ -1,5 +1,6 @@
 import { View, Text, Pressable, StyleSheet, Image } from "react-native";
 
+
 export default function CategoriyGridTile({ title, color, imageUrl, onPress }) {
     return (
         <View style={[styles.gridItem]}>
