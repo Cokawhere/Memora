@@ -6,9 +6,9 @@ import { Ionicons } from "@expo/vector-icons";
 import { useContext } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext';
 
-const { COLORS } = useContext(ThemeContext);
 
 export default function CategoriesScreen({ }) {
+    const { COLORS } = useContext(ThemeContext);
     const Navigation = useNavigation();
     function renderFavorites() {
         Navigation.navigate("favorites");
@@ -36,9 +36,13 @@ export default function CategoriesScreen({ }) {
                 keyExtractor={(occasion) => occasion.id}
                 renderItem={renderOccasion}
                 numColumns={2}
-                style={styles.homePageStyle}
+                style={[styles.homePageStyle, {
+                    backgroundColor: COLORS.backgroundLight
+                }]}
             />
-            <View style={styles.favIcon}>
+            <View style={[styles.favIcon, {
+                backgroundColor: COLORS.white,
+            }]}>
                 <Pressable onPress={renderFavorites} >
                     <Ionicons
                         name={"bookmark"}
@@ -54,7 +58,6 @@ const styles = StyleSheet.create({
     homePageStyle: {
         flex: 1,
         padding: 4,
-        backgroundColor: COLORS.backgroundLight
     },
     favIcon: {
         position: "absolute",
@@ -63,7 +66,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         width: 70,
         height: 70,
-        backgroundColor: COLORS.white,
         justifyContent: "center",
         alignItems: 'center',
         elevation: 10,

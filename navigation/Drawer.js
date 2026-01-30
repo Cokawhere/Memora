@@ -6,8 +6,8 @@ import { useContext } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 const Drawer = createDrawerNavigator();
 export default function DrawerNavigation() {
-       const { COLORS } = useContext(ThemeContext);
-        if (!COLORS) return null;
+    const { COLORS } = useContext(ThemeContext);
+    if (!COLORS) return null;
     return (
         <Drawer.Navigator
             screenOptions={{

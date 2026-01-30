@@ -7,9 +7,10 @@ import EmptyFavorites from '../components/EmptyFavorites';
 import { useContext } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext';
 
-const { COLORS } = useContext(ThemeContext);
 
 export default function FavoritesScreen() {
+    const { COLORS } = useContext(ThemeContext);
+
     const { favorites } = useFavorites();
 
     const navigation = useNavigation();
@@ -32,7 +33,9 @@ export default function FavoritesScreen() {
                 masonry={true}
                 numColumns={2}
                 keyExtractor={(item) => item.id}
-                style={styles.container}
+                style={{
+                    backgroundColor: COLORS.backgroundLight,
+                }}
                 renderItem={renderOccasionItems}
                 ListEmptyComponent={<EmptyFavorites />}
             />
@@ -42,7 +45,6 @@ export default function FavoritesScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: COLORS.backgroundLight,
 
     },
 })

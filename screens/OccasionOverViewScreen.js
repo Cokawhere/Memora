@@ -1,13 +1,14 @@
-import { View, StyleSheet, FlatList } from "react-native";
+import { View,  } from "react-native";
 import { products } from "../utils/data";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { FlashList } from "@shopify/flash-list";
 import OccasionItem from "../components/OccasionItem";
-import { useLayoutEffect,useContext } from "react";
+import { useLayoutEffect, useContext } from "react";
 import { ThemeContext } from '../contexts/ThemeContext';
 
-const { COLORS } = useContext(ThemeContext);
 export default function OccasionOverViewScreen({ }) {
+    const { COLORS } = useContext(ThemeContext);
+
     const route = useRoute();
     const navigation = useNavigation();
     const occasionId = route.params.occasionId;
@@ -42,15 +43,12 @@ export default function OccasionOverViewScreen({ }) {
                 masonry={true}
                 numColumns={2}
                 keyExtractor={(item) => item.id}
-                style={styles.container}
+                style={{
+                    backgroundColor: COLORS.backgroundLight,
+                }}
                 renderItem={renderOccasionItems}
             />
         </View>
     );
 }
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: COLORS.backgroundLight,
 
-    },
-});

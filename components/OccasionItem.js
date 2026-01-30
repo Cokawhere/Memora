@@ -6,12 +6,15 @@ import {
     Pressable,
     Dimensions,
 } from "react-native";
-import { useState, useEffect } from "react";
+import { useState, useContext,useLayoutEffect } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
+
 
 export default function OccasionItem({ title, creator, priceRange, imageUrl, onPress }) {
     const [aspectRatio, setAspectRatio] = useState(0.75);
+    const {COLORS}=useContext(ThemeContext)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (imageUrl) {
             Image.getSize(
                 imageUrl,
@@ -33,7 +36,7 @@ export default function OccasionItem({ title, creator, priceRange, imageUrl, onP
                     />
                 </View>
             </Pressable>
-            <Text numberOfLines={1} ellipsizeMode="..." style={styles.title}>
+            <Text numberOfLines={1} ellipsizeMode="..." style={{color: COLORS.black,}}>
                 {shortTitle}
             </Text>
 
@@ -56,7 +59,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: 'bold',
         paddingBottom: 8,
-        color: '#000000da',
         fontFamily: ""
     },
     pressableStyle: {

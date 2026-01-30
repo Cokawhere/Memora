@@ -3,11 +3,12 @@ import { createContext, useState, useMemo, useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { darkTheme, lightTheme } from '../constants/colors';
 
+
 const THEMS_KEY = 'memora_theme';
-const ThemeContext = createContext();
+export const ThemeContext = createContext();
 
 export default function ThemeProvider({ children }) {
-    const [isDrak, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(true);
 
     useEffect(() => {
         const loadTheme = async () => {
@@ -24,7 +25,7 @@ export default function ThemeProvider({ children }) {
     }, []);
 
     const toggleTheme = async () => {
-        const newTheme = !isDrak;
+        const newTheme = !isDark;
         setIsDark(newTheme);
         try {
             await AsyncStorage.setItem(THEMS_KEY, JSON.stringify(newTheme));
@@ -35,10 +36,10 @@ export default function ThemeProvider({ children }) {
         }
     };
     const themeValue = useMemo(() => ({
-        isDrak, 
+        isDark, 
         toggleTheme,
-        COLORS:isDrak?lightTheme:darkTheme,
-    }), [isDrak])
+        COLORS:isDark?darkTheme : lightTheme,
+    }), [isDark])
 
     return (
         <ThemeContext.Provider value={themeValue}>

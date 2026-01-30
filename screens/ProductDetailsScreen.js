@@ -10,34 +10,39 @@ import { useRoute } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import { useFavorites } from "../hooks/useFavorites";
 import { ThemeContext } from '../contexts/ThemeContext';
-import { useContext } from 'react'
+import { useContext, useMemo } from 'react'
 
 
-const { COLORS } = useContext(ThemeContext);
 
 export default function ProductDetailsScreen() {
+    const { COLORS } = useContext(ThemeContext);
+
     const route = useRoute();
     const data = route.params;
     const imageUrl = data.imageUrl;
     const { isFavorite, toggleFavorite } = useFavorites();
     const favorite = isFavorite(data.id);
 
+    const theme = useMemo(() =>
+        styles(COLORS)
+
+        , [COLORS])
     return (
         <ImageBackground
             source={{ uri: imageUrl }}
             resizeMode="cover"
-            style={styles.background}
+            style={theme.background}
         >
-            <View style={styles.container}>
-                <View style={styles.imageConatiner}>
+            <View style={theme.container}>
+                <View style={theme.imageConatiner}>
                     <Image
                         source={{ uri: imageUrl }}
-                        style={[styles.productDetailsImageStyle]}
+                        style={[theme.productDetailsImageStyle]}
                         resizeMode="cover"
                     />
                 </View>
 
-                <View style={styles.favIcon}>
+                <View style={theme.favIcon}>
                     <Pressable onPress={() => toggleFavorite(data)}>
                         <Ionicons
                             name={favorite ? "heart" : "heart-outline"}
@@ -47,14 +52,14 @@ export default function ProductDetailsScreen() {
                     </Pressable>
                 </View>
 
-                <View style={styles.titleIconContainer}>
-                    <Text style={styles.title}>{data.title}</Text>
-                    <Text style={styles.price}>
-                        <Text style={styles.creactorFront}>{"Price : "}</Text>
+                <View style={theme.titleIconContainer}>
+                    <Text style={theme.title}>{data.title}</Text>
+                    <Text style={theme.price}>
+                        <Text style={theme.creactorFront}>{"Price : "}</Text>
                         {data.priceRange}
                     </Text>
-                    <Text style={styles.creator}>
-                        <Text style={styles.creactorFront}>{"Creator : "}</Text>
+                    <Text style={theme.creator}>
+                        <Text style={theme.creactorFront}>{"Creator : "}</Text>
                         {data.creator}
                     </Text>
                 </View>
@@ -63,7 +68,7 @@ export default function ProductDetailsScreen() {
     );
 }
 
-const styles = StyleSheet.create({
+const styles = (COLORS) => StyleSheet.create({
     background: {
         flex: 1,
         justifyContent: "center",
@@ -94,7 +99,7 @@ const styles = StyleSheet.create({
     },
     titleIconContainer: {
         marginHorizontal: 15,
-        marginTop:10,
+        marginTop: 10,
     },
     title: {
         color: COLORS.primary,
@@ -128,5 +133,5 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 0, height: 1 },
         textShadowRadius: 2,
     },
-    
+
 });
