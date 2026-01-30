@@ -2,14 +2,16 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import CategoriesScreen from "../screens/CategoriesScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import { Ionicons } from "@expo/vector-icons";
-import { useContext } from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
+import { useContext } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
+import CustomDrawerContent from "../components/CustomDrawerContent";
 const Drawer = createDrawerNavigator();
 export default function DrawerNavigation() {
     const { COLORS } = useContext(ThemeContext);
     if (!COLORS) return null;
     return (
         <Drawer.Navigator
+            drawerContent={(props) => <CustomDrawerContent {...props} />}
             screenOptions={{
                 headerStyle: {
                     backgroundColor: COLORS.primary,
@@ -32,8 +34,9 @@ export default function DrawerNavigation() {
                 name="Categories"
                 component={CategoriesScreen}
                 options={{
-                    drawerIcon: ({ color, size }) => (<Ionicons name="list" color={color} size={size} />)
-
+                    drawerIcon: ({ color, size }) => (
+                        <Ionicons name="list" color={color} size={size} />
+                    ),
                 }}
             />
             <Drawer.Screen
@@ -41,7 +44,9 @@ export default function DrawerNavigation() {
                 component={FavoritesScreen}
                 options={{
                     title: "Favorites",
-                    drawerIcon: ({ color, size }) => (<Ionicons name="heart" color={color} size={size} />)
+                    drawerIcon: ({ color, size }) => (
+                        <Ionicons name="heart" color={color} size={size} />
+                    ),
                 }}
             />
         </Drawer.Navigator>
