@@ -1,11 +1,16 @@
 import { View, Text } from 'react-native'
-import { createContext, useState, useMemo, useEffect } from 'react'
+import { createContext, useState, useMemo, useEffect,useContext } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { darkTheme, lightTheme } from '../constants/colors';
 
 
 const THEMS_KEY = 'memora_theme';
 export const ThemeContext = createContext();
+function useTheme (){
+    const context=useContext(ThemeContext);
+    if(context===undefined ) throw new Error('context is used out of his scope');
+    return context;
+} 
 
 export default function ThemeProvider({ children }) {
     const [isDark, setIsDark] = useState(false);
@@ -47,3 +52,4 @@ export default function ThemeProvider({ children }) {
         </ThemeContext.Provider>
     )
 }
+export {useTheme};
