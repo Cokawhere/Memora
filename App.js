@@ -6,6 +6,7 @@ import Nativestack from "./navigation/Native-stack"
 import ThemeProvider from "./contexts/ThemeContext";
 
 
+
 SplashScreen.preventAutoHideAsync();
 
 
@@ -45,9 +46,9 @@ export default function App() {
       <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
         <StatusBar barStyle={"light-content"} />
         <ThemeProvider>
-        <NavigationContainer>
-          <Nativestack />
-        </NavigationContainer>
+          <NavigationContainer>
+            <Nativestack />
+          </NavigationContainer>
         </ThemeProvider>
       </View>
     </>

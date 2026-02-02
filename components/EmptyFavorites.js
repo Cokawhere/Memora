@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
-import { ThemeContext } from '../contexts/ThemeContext';
-import { useContext } from 'react'
+import { useTheme } from "../contexts/ThemeContext";
 
 
 export default function EmptyFavorites() {
-    const { COLORS } = useContext(ThemeContext);
+    const { COLORS } = useTheme();
 
     return (
         <View style={styles.emptyContainer}>

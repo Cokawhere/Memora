@@ -1,22 +1,22 @@
 import { View, Text, StyleSheet, Switch } from "react-native";
-import { useContext, useMemo } from "react";
 import {
     DrawerItemList,
     DrawerContentScrollView,
 } from "@react-navigation/drawer";
 import { Ionicons } from "@expo/vector-icons";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 export default function CustomDrawerContent(props) {
-    const { COLORS, isDark, toggleTheme } = useContext(ThemeContext);
+    const { COLORS, isDark, toggleTheme } = useTheme();
 
     return (
         <DrawerContentScrollView
             {...props}
             style={{
                 backgroundColor: COLORS.primary,
-            }}
-        >
+                overflow: "hidden",
+                
+            }}>
             <View style={[styles.headerSection, {
                 borderBottomColor: COLORS.white,
             }]}>
@@ -27,14 +27,11 @@ export default function CustomDrawerContent(props) {
                             color: COLORS.white,
                             textShadowColor: isDark ? "#f5a6d3" : "#efdbe6",
                         },
-                    ]}
-                >
+                    ]}>
                     Memora
                 </Text>
             </View>
-
             <DrawerItemList {...props} />
-
             <View style={[styles.separator, {
                 borderTopColor: COLORS.white,
             }]}>
@@ -88,6 +85,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        paddingHorizontal: 15,
     },
     themeName: {
         fontSize: 27,
